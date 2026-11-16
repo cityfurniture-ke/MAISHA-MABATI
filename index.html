@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1c50">
+  <meta name="description" content="Explore roofing sheet styles and prices from Maisha Mabati. Ask us about lengths, colours, reject sheets and delivery.">
+  <title>Maisha Mabati | Roofing sheets for every budget</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0b1c50;
+      --navy-deep: #07143a;
+      --red: #e51d18;
+      --gold: #ff5149;
+      --ink: #17213a;
+      --muted: #647087;
+      --paper: #eaf0fc;
+      --surface: #e1eafb;
+      --surface-soft: #f2f6ff;
+      --white: #fff;
+      --line: #d3def0;
+      --shadow: 0 18px 50px rgba(16, 30, 70, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { background: var(--navy-deep); color: #e8ecf7; font-size: .85rem; }
+    .topbar .wrap {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .topbar a { color: #fff; text-decoration: none; font-weight: 700; }
+    header { background: var(--navy); color: white; }
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+    .brand img {
+      width: 66px;
+      height: 66px;
+      border-radius: 9px;
+      object-fit: contain;
+      border: 2px solid rgba(255,255,255,.3);
+      background: var(--navy);
+    }
+    .brand strong { display: block; font-size: 1.12rem; letter-spacing: .06em; }
+    .brand span { display: block; color: #c8d0e4; font-size: .78rem; }
+    .nav-links { display: flex; align-items: center; gap: 27px; }
+    .nav-links a { color: #e8ecf7; text-decoration: none; font-size: .92rem; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta {
+      background: var(--red);
+      color: white;
+      padding: 10px 17px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 86% 12%, rgba(245,184,68,.16), transparent 31%),
+        linear-gradient(125deg, var(--navy) 4%, #172d61 75%, #203a70);
+      color: white;
+      padding: 78px 0 84px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -155px;
+      bottom: -240px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.025), 0 0 0 70px rgba(255,255,255,.025);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      color: #fce2a8;
+      background: rgba(255,255,255,.06);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    h1 {
+      max-width: 700px;
+      margin: 19px 0 15px;
+      font-size: clamp(2.4rem, 6vw, 4.65rem);
+      line-height: 1.03;
+      letter-spacing: -.045em;
+    }
+    h1 span { color: var(--gold); }
+    .hero p { max-width: 570px; color: #d7deee; font-size: 1.08rem; margin: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 8px;
+      padding: 11px 18px;
+      background: var(--red);
+      color: white;
+      text-decoration: none;
+      font-weight: 750;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 9px 22px rgba(227,41,33,.22); }
+    .button-light { background: white; color: var(--navy); }
+    .button-whatsapp { background: #168a4a; color: white; }
+    .button-whatsapp:hover { box-shadow: 0 9px 22px rgba(22,138,74,.25); }
+    .button-call { background: var(--gold); color: var(--navy-deep); }
+    .button-call:hover { box-shadow: 0 9px 22px rgba(245,184,68,.25); }
+    .benefits {
+      position: relative;
+      z-index: 2;
+      margin-top: -26px;
+    }
+    .benefit-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      box-shadow: var(--shadow);
+    }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+    }
+    .benefit + .benefit { border-left: 1px solid var(--line); }
+    .benefit-icon {
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #fff4db;
+      color: #8d5b00;
+      font-size: 1.15rem;
+    }
+    .benefit strong { display: block; font-size: .92rem; }
+    .benefit small { color: var(--muted); font-size: .78rem; }
+    section { padding: 76px 0; }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 27px;
+    }
+    .kicker { color: var(--red); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; font-size: .75rem; }
+    h2 { margin: 5px 0 0; color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.55rem); line-height: 1.15; letter-spacing: -.03em; }
+    .section-heading p { max-width: 420px; margin: 0; color: var(--muted); font-size: .95rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      box-shadow: 0 8px 22px rgba(16,30,70,.045);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .product-card img { display: block; width: 100%; height: 220px; object-fit: contain; background: #e6e9ef; cursor: zoom-in; }
+    .product-info { padding: 17px 18px 19px; }
+    .product-title { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+    .product-title h3 { margin: 0; color: var(--navy); font-size: 1.08rem; }
+    .price { color: var(--red); font-weight: 850; white-space: nowrap; }
+    .unit { color: var(--muted); font-size: .79rem; }
+    .product-info p { margin: 9px 0 0; color: var(--muted); font-size: .86rem; }
+    .reject-section { background: #fff1d4; }
+    .reject-section h2 { color: var(--navy); }
+    .reject-intro { max-width: 710px; margin: 10px 0 25px; color: var(--muted); }
+    .reject-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 770px; }
+    .reject-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 21px 23px;
+      border: 1px solid #f0dfbd;
+      border-radius: 12px;
+      background: #fff8e9;
+    }
+    .reject-card h3 { margin: 0; color: var(--navy); font-size: 1.08rem; }
+    .reject-card p { margin: 4px 0 0; color: var(--muted); font-size: .82rem; }
+    .reject-price { color: #a35200; font-size: 1.3rem; font-weight: 850; white-space: nowrap; }
+    .condition-note {
+      max-width: 770px;
+      margin-top: 17px;
+      padding: 13px 15px;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 7px 7px 0;
+      background: rgba(255,248,233,.88);
+      color: #5d4b2d;
+      font-size: .86rem;
+    }
+    .gallery { background: #e2ebfa; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .gallery-grid img { width: 100%; height: 205px; display: block; object-fit: contain; border-radius: 9px; background: #e6e9ef; cursor: zoom-in; }
+    .product-card img:focus-visible, .gallery-grid img:focus-visible { outline: 3px solid var(--red); outline-offset: -3px; }
+    .image-viewer {
+      width: min(94vw, 1100px);
+      max-width: none;
+      max-height: 94vh;
+      padding: 48px 16px 16px;
+      overflow: visible;
+      border: 0;
+      border-radius: 12px;
+      background: #07143a;
+    }
+    .image-viewer::backdrop { background: rgba(3, 9, 25, .88); }
+    .image-viewer img { display: block; width: 100%; max-height: calc(94vh - 64px); object-fit: contain; }
+    .image-viewer-close {
+      position: absolute;
+      top: 8px;
+      right: 9px;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 50%;
+      background: var(--surface-soft);
+      color: var(--navy);
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .video-section { background: var(--paper); }
+    .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .video-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      box-shadow: 0 8px 22px rgba(16,30,70,.045);
+    }
+    .video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--navy-deep); }
+    .video-card h3 { margin: 0; padding: 13px 16px; color: var(--navy); font-size: .98rem; }
+    .about-section { background: #edf2fc; }
+    .about-copy { max-width: 760px; color: var(--muted); font-size: 1.02rem; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+    .why-card {
+      padding: 21px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+    .why-card .benefit-icon { margin-bottom: 13px; }
+    .why-card h3 { margin: 0; color: var(--navy); font-size: 1rem; }
+    .why-card p { margin: 8px 0 0; color: var(--muted); font-size: .87rem; }
+    .reviews-section { background: var(--paper); }
+    .review-form {
+      max-width: 690px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-soft);
+      box-shadow: 0 8px 22px rgba(16,30,70,.045);
+    }
+    .review-form label { display: block; margin: 0 0 7px; color: var(--navy); font-size: .9rem; font-weight: 700; }
+    .review-form input, .review-form select, .review-form textarea {
+      width: 100%;
+      margin: 0 0 17px;
+      padding: 11px 12px;
+      border: 1px solid #cfd5e1;
+      border-radius: 7px;
+      background: #f2f6ff;
+      color: var(--ink);
+      font: inherit;
+    }
+    .review-form textarea { min-height: 125px; resize: vertical; }
+    .review-form input:focus, .review-form select:focus, .review-form textarea:focus { outline: 3px solid rgba(22,138,74,.17); border-color: #168a4a; }
+    .review-note { margin: 0 0 18px; color: var(--muted); font-size: .84rem; }
+    .contact-section { padding: 68px 0; background: var(--navy); color: white; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact-section h2 { color: white; }
+    .contact-section p { color: #d0d8e9; margin: 10px 0 0; max-width: 550px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .contact-actions .button-light { background: #fff; color: var(--navy); }
+    footer { padding: 20px 0; background: var(--navy-deep); color: #b7c1d8; font-size: .82rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 16px; }
+    footer a { color: white; text-decoration: none; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 30px, 560px); }
+      .topbar .wrap { flex-direction: column; justify-content: center; text-align: center; gap: 1px; padding: 5px 0; }
+      .topbar .topbar-note { display: inline; }
+      .nav { min-height: 72px; }
+      .brand img { width: 52px; height: 52px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-links .nav-cta { padding: 9px 13px; font-size: .85rem; }
+      .hero { padding: 60px 0 70px; }
+      .hero p { font-size: 1rem; }
+      .benefit-row { grid-template-columns: 1fr; }
+      .benefit { padding: 13px 18px; }
+      .benefit + .benefit { border-left: 0; border-top: 1px solid var(--line); }
+      section { padding: 58px 0; }
+      .section-heading { align-items: start; flex-direction: column; gap: 10px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-card img { height: 165px; }
+      .product-info { padding: 13px; }
+      .product-title { flex-direction: column; gap: 1px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid img { height: 170px; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-inner { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 460px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .product-card img { height: 225px; }
+      .reject-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .gallery-grid img { height: 145px; }
+      .video-grid { grid-template-columns: 1fr; }
+      .review-form { padding: 18px; }
+      .footer-row { flex-direction: column; gap: 5px; }
+      .contact-actions { width: 100%; }
+      .contact-actions .button { flex: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span class="topbar-note"><a href="https://www.google.com/maps/search/?api=1&query=Ruiru+Kamiti+Road%2C+Kenya" target="_blank" rel="noopener">Ruiru Kamiti Road, Kenya</a> &nbsp;·&nbsp; Monday–Saturday, 8:00 AM–6:00 PM</span>
+      <a href="tel:+254755451728">Call us: 0755 451 728</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Maisha Mabati home">
+        <img src="IMG-20261116-WA0013.jpg" alt="Maisha Mabati logo">
+        <span><strong>MAISHA MABATI</strong><span>Roofing made simple</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#styles">Roofing styles</a>
+        <a href="#rejects">Reject sheets</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About us</a>
+        <a href="#why-us">Why choose us</a>
+        <a href="#reviews">Reviews</a>
+        <a class="nav-cta" href="#contact">Get in touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <span class="eyebrow">☀ &nbsp; FIND THE RIGHT ROOF FOR YOU</span>
+        <h1>Prepare your home with <span>quality roofing sheets.</span></h1>
+        <p>Choose from all colours and request customisation to suit your project. Explore popular mabati styles, compare guide prices and ask us about budget-friendly reject sheets.</p>
+        <div class="hero-actions">
+          <a class="button" href="#styles">Explore roofing styles <span aria-hidden="true">→</span></a>
+          <a class="button button-call" href="tel:+254755451728">☎ &nbsp; Call us</a>
+          <a class="button button-whatsapp" href="https://wa.me/254769025872?text=Hello%20Maisha%20Mabati%2C%20I%27d%20like%20to%20ask%20about%20your%20roofing%20sheets." target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap benefits" aria-label="Shopping information">
+      <div class="benefit-row">
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">KSh</span>
+          <span><strong>Clear guide prices</strong><small>Prices shown per metre</small></span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">🚚</span>
+          <span><strong>Free delivery on 30+ sheets</strong><small>Ask us to confirm delivery area</small></span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">☎</span>
+          <span><strong>Made for your preferences</strong><small>All colours and client customisation</small></span>
+        </div>
+      </div>
+    </div>
+
+    <section id="styles">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Choose your style</span>
+            <h2>Roofing sheets & guide prices</h2>
+          </div>
+          <p>Choose from all colours and ask about customising your order. Prices are per metre in KSh; contact us to discuss your requirements and confirm your quote.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="IMG-20261116-WA0002.jpg" alt="Silver corrugated roofing sheets stacked for delivery" loading="lazy">
+            <div class="product-info">
+              <div class="product-title"><h3>Ordinary Iron Sheets</h3><span class="price">KSh 250</span></div>
+              <span class="unit">per metre</span>
+              <p>A practical, classic corrugated profile for a range of building projects.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="IMG-20261116-WA0003.jpg" alt="Grey corrugated roofing sheets" loading="lazy">
+            <div class="product-info">
+              <div class="product-title"><h3>Corrugated Dumuzas</h3><span class="price">KSh 350</span></div>
+              <span class="unit">per metre</span>
+              <p>Traditional corrugated styling with a clean, familiar finish.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="IMG-20261116-WA0004.jpg" alt="Green box profile roofing sheet" loading="lazy">
+            <div class="product-info">
+              <div class="product-title"><h3>Box Profile</h3><span class="price">KSh 400</span></div>
+              <span class="unit">per metre</span>
+              <p>A crisp, modern profile. Choose your colour and ask us about customising your order.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="IMG-20261116-WA0011.jpg" alt="Dark finished roofing sheets in a distinctive profile" loading="lazy">
+            <div class="product-info">
+              <div class="product-title"><h3>Versatile</h3><span class="price">KSh 630</span></div>
+              <span class="unit">per metre</span>
+              <p>A distinctive roof profile for a more defined look.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="IMG-20261116-WA0010.jpg" alt="Roman tile profile roofing sheets in burgundy" loading="lazy">
+            <div class="product-info">
+              <div class="product-title"><h3>Roman Tile</h3><span class="price">KSh 650</span></div>
+              <span class="unit">per metre</span>
+              <p>Tile-inspired styling with a bold, elegant appearance.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reject-section" id="rejects">
+      <div class="wrap">
+        <span class="kicker">Budget-friendly option</span>
+        <h2>Looking for reject mabati?</h2>
+        <p class="reject-intro">We also sell reject roofing sheets at the prices below. These are separate from the standard styles listed above—please ask us about the condition, available lengths and stock before you buy.</p>
+        <div class="reject-grid">
+          <article class="reject-card">
+            <div><h3>Box Profile Reject</h3><p>Sold as reject sheets</p></div>
+            <div class="reject-price">KSh 200 <span class="unit">/ metre</span></div>
+          </article>
+          <article class="reject-card">
+            <div><h3>Ordinary Reject</h3><p>Sold as reject sheets</p></div>
+            <div class="reject-price">KSh 150 <span class="unit">/ metre</span></div>
+          </article>
+        </div>
+        <p class="condition-note"><strong>Please note:</strong> Reject mabati may have cosmetic or other imperfections. Contact us for details and, where possible, inspect the sheets before purchase. Free delivery applies to orders above 30 sheets; confirm location and terms with us.</p>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">See the styles</span>
+            <h2 id="gallery-title">A closer look at mabati</h2>
+          </div>
+          <p>Product photos show examples of our roofing styles. We offer all colours and accept client customisation requests—contact us to discuss your preferences.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="IMG-20261116-WA0005.jpg" alt="Blue tile-profile roofing sheets" loading="lazy">
+          <img src="IMG-20261116-WA0006.jpg" alt="Blue corrugated roofing sheets" loading="lazy">
+          <img src="IMG-20261116-WA0007.jpg" alt="Red corrugated roofing sheets" loading="lazy">
+          <img src="IMG-20261116-WA0008.jpg" alt="Dark roofing sheets" loading="lazy">
+          <img src="IMG-20261116-WA0012.jpg" alt="Silver ordinary corrugated sheets" loading="lazy">
+          <img src="IMG-20261116-WA0004.jpg" alt="Green box profile roofing sheet" loading="lazy">
+          <img src="IMG-20261116-WA0010.jpg" alt="Burgundy Roman tile roofing sheets" loading="lazy">
+          <img src="IMG-20261116-WA0011.jpg" alt="Dark roofing sheets in a raised profile" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section" id="videos" aria-labelledby="videos-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Watch</span>
+            <h2 id="videos-title">See our mabati videos</h2>
+          </div>
+          <p>Watch product videos from Maisha Mabati. Use the player controls to play, pause or adjust the volume.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card">
+            <video controls playsinline muted preload="metadata">
+              <source src="VID-20261116-WA0000.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <h3>Maisha Mabati video 1</h3>
+          </article>
+          <article class="video-card">
+            <video controls playsinline muted preload="metadata">
+              <source src="VID-20261116-WA0001.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <h3>Maisha Mabati video 2</h3>
+          </article>
+          <article class="video-card">
+            <video controls playsinline muted preload="metadata">
+              <source src="VID-20261116-WA0014.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <h3>Maisha Mabati video 3</h3>
+          </article>
+          <article class="video-card">
+            <video controls playsinline muted preload="metadata">
+              <source src="VID-20261116-WA0015.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <h3>Maisha Mabati video 4</h3>
+          </article>
+          <article class="video-card">
+            <video controls playsinline muted preload="metadata">
+              <source src="VID-20261116-WA0016.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <h3>Maisha Mabati video 5</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="wrap">
+        <span class="kicker">About us</span>
+        <h2>Roofing options for your next project</h2>
+        <p class="about-copy">Maisha Mabati offers a selection of roofing sheet styles, including Ordinary, Corrugated Dumuzas, Box Profile, Versatile and Roman Tile, as well as clearly identified reject options. Choose from all colours, and let us know how you would like your order customised. We are based on Ruiru Kamiti Road, Kenya. Contact us to discuss your requirements and confirm a quote before ordering.</p>
+        <a class="button button-call" href="https://www.google.com/maps/search/?api=1&query=Ruiru+Kamiti+Road%2C+Kenya" target="_blank" rel="noopener">Find us on Ruiru Kamiti Road</a>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <div class="wrap">
+        <span class="kicker">Why choose us</span>
+        <h2>Helpful choices, clear details</h2>
+        <div class="why-grid">
+          <article class="why-card">
+            <span class="benefit-icon" aria-hidden="true">⌂</span>
+            <h3>Styles to compare</h3>
+            <p>Explore several popular profiles and choose what suits your project.</p>
+          </article>
+          <article class="why-card">
+            <span class="benefit-icon" aria-hidden="true">KSh</span>
+            <h3>Prices shown upfront</h3>
+            <p>See guide prices per metre, with reject sheets listed separately.</p>
+          </article>
+          <article class="why-card">
+            <span class="benefit-icon" aria-hidden="true">☎</span>
+            <h3>Speak to us directly</h3>
+            <p>Choose from all colours and tell us how you would like your order customised.</p>
+          </article>
+          <article class="why-card">
+            <span class="benefit-icon" aria-hidden="true">🚚</span>
+            <h3>Delivery information</h3>
+            <p>Free delivery is available on orders above 30 sheets. Ask us to confirm the terms and delivery area.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Customer feedback</span>
+            <h2>Share your experience</h2>
+          </div>
+          <p>Your feedback helps us serve customers better. Send your rating and comment to us directly on WhatsApp.</p>
+        </div>
+        <form class="review-form" id="review-form">
+          <label for="review-name">Your name</label>
+          <input id="review-name" name="name" type="text" autocomplete="name" required>
+
+          <label for="review-rating">Your rating</label>
+          <select id="review-rating" name="rating" required>
+            <option value="">Choose a rating</option>
+            <option value="5/5">★★★★★ — Excellent (5/5)</option>
+            <option value="4/5">★★★★☆ — Very good (4/5)</option>
+            <option value="3/5">★★★☆☆ — Good (3/5)</option>
+            <option value="2/5">★★☆☆☆ — Fair (2/5)</option>
+            <option value="1/5">★☆☆☆☆ — Poor (1/5)</option>
+          </select>
+
+          <label for="review-comment">Your comment</label>
+          <textarea id="review-comment" name="comment" required placeholder="Tell us about your experience..."></textarea>
+          <p class="review-note">Your review will open in WhatsApp for you to send to us. It will not be published on this website automatically.</p>
+          <button class="button button-whatsapp" type="submit">Send review on WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <span class="kicker" style="color:#f5b844">Ready to plan your roof?</span>
+          <h2>Let’s talk about your order.</h2>
+          <p>Call for a quote or message us on WhatsApp. Tell us your preferred style, colour, sheet lengths and any customisation requests.</p>
+          <p><strong>Visit us:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Ruiru+Kamiti+Road%2C+Kenya" target="_blank" rel="noopener">Ruiru, Kamiti Road, Kenya</a><br><strong>Opening hours:</strong> Monday to Saturday, 8:00 AM–6:00 PM</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-call" href="tel:+254755451728">☎ &nbsp; Call: 0755 451 728</a>
+          <a class="button button-whatsapp" href="https://wa.me/254769025872?text=Hello%20Maisha%20Mabati%2C%20please%20help%20me%20with%20a%20roofing%20sheets%20quote." target="_blank" rel="noopener">WhatsApp: 0769 025 872</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> Maisha Mabati. All rights reserved.</span>
+      <span>Prices are guide prices; please confirm your quote before ordering.</span>
+    </div>
+  </footer>
+  <dialog class="image-viewer" id="image-viewer" aria-label="Enlarged product photo">
+    <button class="image-viewer-close" type="button" aria-label="Close enlarged photo">&times;</button>
+    <img id="image-viewer-photo" alt="">
+  </dialog>
+  <script>
+    document.querySelectorAll(".video-card video").forEach(function (video) {
+      video.muted = true;
+      video.volume = 0;
+      video.addEventListener("volumechange", function () {
+        if (!video.muted || video.volume !== 0) {
+          video.muted = true;
+          video.volume = 0;
+        }
+      });
+    });
+
+    const imageViewer = document.getElementById("image-viewer");
+    const viewerPhoto = document.getElementById("image-viewer-photo");
+
+    function showImage(image) {
+      viewerPhoto.src = image.src;
+      viewerPhoto.alt = image.alt;
+      imageViewer.showModal();
+    }
+
+    document.querySelectorAll(".product-card img, .gallery-grid img").forEach(function (image) {
+      image.tabIndex = 0;
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", `View larger: ${image.alt}`);
+      image.title = "Select to view the full photo";
+      image.addEventListener("click", function () {
+        showImage(image);
+      });
+      image.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showImage(image);
+        }
+      });
+    });
+
+    imageViewer.querySelector(".image-viewer-close").addEventListener("click", function () {
+      imageViewer.close();
+    });
+    imageViewer.addEventListener("click", function (event) {
+      if (event.target === imageViewer) imageViewer.close();
+    });
+
+    document.getElementById("review-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const name = form.elements.name.value.trim();
+      const rating = form.elements.rating.value;
+      const comment = form.elements.comment.value.trim();
+      const message = `Maisha Mabati customer review\nName: ${name}\nRating: ${rating}\nComment: ${comment}`;
+      const whatsappUrl = `https://wa.me/254769025872?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
